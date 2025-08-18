@@ -1,0 +1,45 @@
+create database exemplo3;
+
+use exemplo3;
+
+create table clientes (
+cod_cliente int auto_increment primary key not null,
+nome_cliente varchar(100) not null,
+cpf_cliente varchar(14) not null,
+endereco varchar(100) not null,
+estado char(2) default 'SP',
+celular varchar(19) not null
+);
+
+create table produtos1 (
+cod_produto int auto_increment primary key not null,
+nome_produto varchar(100) not null,
+valor decimal (5,2) not null,
+qtde int,
+descricao varchar(300)
+);
+
+create table fornecedores (
+cnpj varchar(18) not null,
+nome_fornecedor varchar(100) not null,
+celular varchar(100) not null,
+endereco varchar(300) not null,
+cod_fornecedor int auto_increment primary key not null
+);
+
+create table tem (
+cod_tem int auto_increment primary key not null,
+cod_fornecedor int,
+cod_produto int,
+foreign key (cod_produto) references produtos1 (cod_produto),
+foreign key (cod_fornecedor) references fornecedores (cod_fornecedor)
+);
+
+
+-- Para visualizar a tabela
+select * from clientes;
+
+-- Remoção de tabelas
+drop tables clientes;
+-- Remoção de banco de dados
+drop  database exemplo3;
