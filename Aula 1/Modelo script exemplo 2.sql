@@ -43,3 +43,40 @@ select * from clientes;
 drop tables clientes;
 -- Remoção de banco de dados
 drop  database exemplo3;
+
+
+-- Alterações de campos
+alter table clientes
+add sexo char(1);
+
+alter table clientes
+drop column sexo;
+
+alter table clientes
+rename to pessoa_fisica;
+
+alter table pessoa_fisica
+change cpf_cliente cpfp varchar(18);
+
+alter table pessoa_fisica
+modify column nome_cliente varchar(150);
+
+alter table pessoa_fisica
+modify column estado char(2) default 'MG';
+
+
+
+alter table pessoa_fisica
+add cidade char(50);
+
+alter table produtos1
+modify column valor decimal(7,2);
+
+alter table fornecedores
+add estado char(2) default 'SP';
+
+alter table fornecedores
+add cidade char(50);
+
+alter table fornecedores
+modify column estado char(2) default 'SP';

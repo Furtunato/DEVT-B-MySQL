@@ -2,6 +2,8 @@ CREATE DATABASE AV1;
 
 USE AV1;
 
+show tables;
+
 CREATE TABLE Fornecedor (
 fcodigo int auto_increment primary key not null,
 fnome varchar(50) not null,
@@ -36,10 +38,20 @@ foreign key (pcod) references Peca (pcod),
 foreign key (fcod) references Fornecedor (fcod)
 );
 
+
 ALTER TABLE Fornecedor
 change column fcodigo fcod int auto_increment not null;
 
 ALTER TABLE Peca
 change column pcodigo pcod int auto_increment not null;
 
+-- ALTER TABLE FORNECEDOR --
+	-- ADD CONSTRAINT FCODIGO
+	-- FOREIGN KEY (FCOD) REFERENCES CIDADE
+    
+select * from Peca;
 
+insert into fornecedor value (1, 'REDRAGON', '1', 1);
+
+alter table Fornecedor
+add fone char(50);
