@@ -101,9 +101,11 @@ DELETE FROM inscricoes_avaliacoes WHERE curso_id = 4;
 -- Parte 6 — Consultas com Critérios e Agrupamentos
 SELECT * FROM Aluno;
 SELECT nome_aluno, email FROM Aluno;
-SELECT * FROM Cursos WHERE carga_horaria >= 40;
+SELECT * FROM Cursos WHERE carga_horaria > 40;
 SELECT * FROM Cursos WHERE status = 'inativo';
-
+SELECT * FROM Aluno WHERE dt_nasc > '2000-01-01';
 SELECT * FROM inscricoes_avaliacoes WHERE nota > 9.0;
 SELECT COUNT(*) FROM Cursos;
 SELECT * FROM Cursos ORDER BY carga_horaria DESC LIMIT 2;
+
+-- Parte 7 — Desafios Extras
