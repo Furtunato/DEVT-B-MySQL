@@ -15,6 +15,7 @@ if ($conn->query($sql) === TRUE) {
   echo "Erro: " . $conn->error;
 }
 // header("Location: index.html"); // ou index.php, dependendo do seu arquivo principal
-exit;
+
 $conn->close();
+exit;
 ?>

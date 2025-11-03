@@ -16,6 +16,7 @@ if ($conn->query($sql) === TRUE) {
 }
 // header("Location: index.html");
 echo "<br><a href='listar.php'>Voltar para a lista</a>";
-exit;
+
 $conn->close();
+exit;
 ?>
